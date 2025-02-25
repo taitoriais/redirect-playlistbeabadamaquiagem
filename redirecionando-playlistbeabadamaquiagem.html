@@ -9,13 +9,13 @@
 
         if (/android/i.test(userAgent)) {
             // Redireciona direto para o app no Android
-            window.location.href = "intent://youtube.com/playlist?list=PL8_6hRa3EQu8q20tSS8eJQJG6OFczElWz#Intent;package=com.google.android.youtube;scheme=https;end;";
+            window.location.href = "intent://youtube.com/playlist?list=PL8_6hRa3EQu8Tl5nlZNgVPmqBZ8AaBYb6&si=-OFaZcCOJOMcCDM0#Intent;package=com.google.android.youtube;scheme=https;end;";
         } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
             // Redireciona direto para o app no iOS
-            window.location.href = "youtube://youtube.com/playlist?list=PL8_6hRa3EQu8q20tSS8eJQJG6OFczElWz";
+            window.location.href = "youtube://youtube.com/playlist?list=PL8_6hRa3EQu8Tl5nlZNgVPmqBZ8AaBYb6&si=-OFaZcCOJOMcCDM0";
         } else {
             // Para navegadores desktop, abre no site normal
-            window.location.href = "https://youtube.com/playlist?list=PL8_6hRa3EQu8q20tSS8eJQJG6OFczElWz";
+            window.location.href = "https://youtube.com/playlist?list=PL8_6hRa3EQu8Tl5nlZNgVPmqBZ8AaBYb6&si=-OFaZcCOJOMcCDM0";
         }
     </script>
 </head>

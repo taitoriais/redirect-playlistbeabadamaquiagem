@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionando...</title>
+    <script>
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            // Redireciona direto para o app no Android
+            window.location.href = "intent://youtube.com/playlist?list=PL8_6hRa3EQu8q20tSS8eJQJG6OFczElWz#Intent;package=com.google.android.youtube;scheme=https;end;";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            // Redireciona direto para o app no iOS
+            window.location.href = "youtube://youtube.com/playlist?list=PL8_6hRa3EQu8q20tSS8eJQJG6OFczElWz";
+        } else {
+            // Para navegadores desktop, abre no site normal
+            window.location.href = "https://youtube.com/playlist?list=PL8_6hRa3EQu8q20tSS8eJQJG6OFczElWz";
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecionando para a playlist...</p>
+</body>
+</html>
